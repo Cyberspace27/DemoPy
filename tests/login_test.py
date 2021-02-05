@@ -31,6 +31,10 @@ class LoginTest(unittest.TestCase):
         print("dentro del test_swagLabs_title")
         login.validate_page_title()
 
+    def test_swagLabs_title(self):
+        print("dentro del test_swagLabs_title")
+        login.validate_page_title()
+
 
 if __name__ == '__main__':
     unittest.main()

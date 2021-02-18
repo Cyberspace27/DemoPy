@@ -1,12 +1,10 @@
 import unittest
-from builtins import classmethod
-
 from selenium import webdriver
 from generic.conf import TestData as tData
 from pages.login_page import LoginPage
 
 
-class LoginTest(unittest.TestCase):
+class TestLogin(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
@@ -26,15 +24,13 @@ class LoginTest(unittest.TestCase):
     def test_login_action(self):
         print("dentro del test_login_action")
         login.do_login("standard_user", "secret_sauce")
+        self.assertEqual(True, True)
 
     def test_swagLabs_title(self):
         print("dentro del test_swagLabs_title")
         login.validate_page_title()
+        self.assertEqual(True, True)
 
-    def test_swagLabs_title(self):
+    def test_swagLabs_title_two(self):
         print("dentro del test_swagLabs_title")
-        login.validate_page_title()
 
-
-if __name__ == '__main__':
-    unittest.main()
